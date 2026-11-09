@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - อนุรักษ์ ไทรแก้ว (Senior System Analyst & Full-Stack Developer)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Fonts (Prompt for Thai) -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(45deg, #0284c7, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl text-brand-700 tracking-tight">
+                    AT. <span class="text-slate-400 font-medium text-sm">Portfolio</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">เกี่ยวกับฉัน</a>
+                    <a href="#skills" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">ทักษะ</a>
+                    <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">ประวัติการทำงาน</a>
+                    <a href="#projects" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">ผลงาน</a>
+                    <a href="#education" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">การศึกษา</a>
+                    <a href="#contact" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">ติดต่อ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-3/5 text-center md:text-left">
+            <p class="text-brand-600 font-semibold tracking-wide uppercase mb-2">ยินดีต้อนรับสู่ PORTFOLIO ของผม</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight">
+                <span class="gradient-text">อนุรักษ์ ไทรแก้ว</span>
+            </h1>
+            <h2 class="text-xl sm:text-2xl text-slate-600 font-medium mb-6">
+                Senior System Analyst & Full-Stack Developer
+            </h2>
+            <p class="text-slate-500 text-lg mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                ตลอด 12 ปีที่ผ่านมา ผมช่วยออกแบบและพัฒนาระบบให้องค์กรและธุรกิจมาแล้วกว่า 250 โปรเจ็ค สิ่งสำคัญที่ผมยึดถือไม่ใช่แค่การเขียนโค้ด แต่คือการเข้าไปทำความเข้าใจโจทย์ของธุรกิจจริงๆ เพื่อเปลี่ยนกระบวนการทำงานที่ซับซ้อนให้กลายเป็นระบบฐานข้อมูลและซอฟต์แวร์ที่เสถียร ช่วยให้ทีมทำงานได้ง่ายขึ้น และใช้งานได้จริงในระยะยาว
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#projects" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg flex items-center">
+                    ดูผลงานของผม <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#contact" class="bg-white border-2 border-slate-200 hover:border-brand-600 text-slate-700 hover:text-brand-600 px-6 py-3 rounded-lg font-medium transition-colors shadow-sm">
+                    ติดต่อพูดคุย
+                </a>
+            </div>
+        </div>
+        
+        <!-- Profile Image Section -->
+        <div class="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 relative flex-shrink-0">
+            <div class="absolute inset-0 bg-brand-100 rounded-2xl shadow-xl overflow-hidden border-4 border-white">
+                <img src="MyPic.jpg" alt="อนุรักษ์ ไทรแก้ว" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-lg border border-slate-100 text-brand-500 text-2xl">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="absolute -top-4 -left-4 bg-white p-3 rounded-full shadow-lg border border-slate-100 text-amber-500 text-2xl">
+                <i class="fas fa-database"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">เกี่ยวกับฉัน (About Me)</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+                    <p>
+                        ถึงผมจะไม่ได้จบสายตรงด้านคอมพิวเตอร์ แต่ความหลงใหลในการเขียนโค้ดและการสร้างระบบอย่างจริงจัง คือสิ่งที่ขับเคลื่อนให้ผมศึกษา ฝึกฝน และสั่งสมประสบการณ์มาอย่างต่อเนื่อง จนมีความเชี่ยวชาญแท้จริงและพร้อมแก้โจทย์ยากๆ ให้ธุรกิจได้จริง
+                    </p>
+                    <p>
+                        ตลอดระยะเวลา 12 ปีที่ผ่านมา โดยเฉพาะการรับงานฟรีแลนซ์มาอย่างต่อเนื่องตลอด 7 ปี ทำให้ผมได้พบเจอและรับมือกับงานระบบทุกรูปแบบในหลากหลายประเภทธุรกิจ จนส่งมอบงานสำเร็จมาแล้วกว่า <strong class="text-brand-700">200+ โครงการ</strong> ครอบคลุมตั้งแต่งานวางโครงสร้างฐานข้อมูลขนาดใหญ่ ระบบคลังสินค้า โลจิสติกส์ บัญชี ไปจนถึง Web Application เชิงซ้อน โดยเน้นการเข้าไปทำความเข้าใจกระบวนการทำงานจริง เพื่อเปลี่ยน Workflow ที่ซับซ้อนให้กลายเป็นระบบที่เสถียร ช่วยให้ทีมทำงานง่ายขึ้น และใช้งานได้จริงในระยะยาว
+                    </p>
+                    <p>
+                        ประกอบกับประสบการณ์ปฏิบัติงานในองค์กรระดับโลกอย่าง <strong class="text-slate-800">ExxonMobil</strong> ช่วยหล่อหลอมให้ผมยึดมั่นในมาตรฐานงานระดับ Enterprise ทั้งเรื่อง Data Integrity การวางสถาปัตยกรรมระบบ และความปลอดภัยของข้อมูล เพื่อนำมาประยุกต์ใช้ในทุกโปรเจกต์อย่างมืออาชีพ
+                    </p>
+                    <p>
+                        ถึงจะมีประสบการณ์ในสายงานนี้มาอย่างยาวนาน แต่ผมไม่เคยหยุดพัฒนาตัวเองและยังมองว่าตัวเองคือผู้เรียนรู้อยู่เสมอ เพราะเทคโนโลยีไม่มีคำว่าหยุดนิ่ง การได้ค้นพบทักษะและเครื่องมือใหม่ๆ จึงยังคงเป็นความสนุกและความตื่นเต้นในทุกๆ วัน เพื่อนำสิ่งที่ใช่ที่สุดมาแก้โจทย์ ยกระดับซอฟต์แวร์ให้มีประสิทธิภาพ และสร้างประโยชน์สูงสุดให้กับผู้ใช้งาน
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center card-hover">
+                        <div class="text-4xl font-bold text-brand-600 mb-2">12+</div>
+                        <div class="text-slate-500 font-medium">ปี ประสบการณ์</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center card-hover">
+                        <div class="text-4xl font-bold text-brand-600 mb-2">200+</div>
+                        <div class="text-slate-500 font-medium">โปรเจกต์ที่สำเร็จ</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center card-hover">
+                        <div class="text-4xl font-bold text-brand-600 mb-2">DB</div>
+                        <div class="text-slate-500 font-medium">Architecture Expert</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 text-center card-hover">
+                        <div class="text-4xl font-bold text-brand-600 mb-2">SA</div>
+                        <div class="text-slate-500 font-medium">Process Improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">ประวัติการศึกษา (Education)</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="bg-brand-50 text-brand-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">ปริญญาตรี (Bachelor's Degree)</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-1">Bachelor of Communication Arts Program in Digital Communication Arts</h3>
+                        <p class="text-slate-600 text-lg font-medium">
+                            มหาวิทยาลัยวลัยลักษณ์ (Walailak University)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">ทักษะความเชี่ยวชาญ (Skills)</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full mb-8"></div>
+                <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-lg leading-relaxed text-left bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-12">
+                    <p>
+                        จุดเด่นที่แท้จริงของผม คือการทำความเข้าใจความต้องการของลูกค้าอย่างลึกซึ้ง แล้วนำโจทย์นั้นมาเปลี่ยนเป็นเครื่องมือหรือระบบที่ใช้งานได้จริง โดยมีจุดเริ่มต้นจากเครื่องมือหลักอย่าง <strong class="text-brand-700">MS Access</strong> และ <strong class="text-brand-700">MS Excel</strong> ผสานกับการเขียน <strong class="text-slate-800">VBA ร่วมกับ SQL</strong> ซึ่งช่วยให้ผมสามารถสร้างระบบธุรกิจให้ลูกค้าได้ทุกรูปแบบ
+                    </p>
+                    <p>
+                        แต่เมื่อระบบต้องรองรับข้อมูลปริมาณมากและผู้ใช้งานหลายคนได้อย่างเสถียร <strong class="text-brand-700">SQL Server</strong> คือคำตอบที่ผมเลือกใช้ และเมื่อลูกค้าต้องการความคล่องตัวในการทำงานออนไลน์จากทุกที่ <strong class="text-brand-700">MS Azure</strong> ก็เข้ามาเป็นทางออก จนกระทั่งความต้องการพัฒนาสู่การเป็นระบบบนเว็บเต็มรูปแบบ ผมจึงต่อยอดสู่การพัฒนา <strong class="text-slate-800">Web Application</strong> ด้วย <strong class="text-brand-700">PHP และ JavaScript</strong> ทั้งหมดนี้คือชุดเครื่องมือที่ผมชำนาญและพร้อมเลือกใช้ให้เหมาะกับสเกลงานของลูกค้าที่สุด
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- กล่องที่ 1: Database Architecture -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Database Architecture</h3>
+                    <p class="text-slate-500 mb-6">เชี่ยวชาญการออกแบบโครงสร้างฐานข้อมูล (Relational Database) เพื่อรองรับข้อมูลขนาดใหญ่และการประมวลผลที่รวดเร็ว</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">SQL Server</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">MySQL</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">MS Azure</span>
+                    </div>
+                </div>
+
+                <!-- กล่องที่ 2: System Analysis & VBA -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">System Analysis & Automation</h3>
+                    <p class="text-slate-500 mb-6">วิเคราะห์ Requirement ออกแบบ Flow งาน และพัฒนาระบบ Automation ด้วย VBA/SQL เพื่อลดภาระงานแมนนวล</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">MS Access</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">MS Excel VBA</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Process Improvement</span>
+                    </div>
+                </div>
+
+                <!-- กล่องที่ 3: Web Application -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Web Application</h3>
+                    <p class="text-slate-500 mb-6">พัฒนาระบบ Backend และ Frontend ที่มีความเสถียร รองรับการใช้งานจริงผ่านระบบเว็บออนไลน์เต็มตัว</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">PHP / MySQL</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">JavaScript</span>
+                        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">HTML / CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">ประวัติการทำงาน (Professional Experience)</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+
+                <!-- Job 1: Sun Expo Services Co., Ltd. -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover relative border-l-4 border-l-brand-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">System Analyst & Solution Developer</h3>
+                            <p class="text-brand-600 font-medium text-lg">Sun Expo Services Co., Ltd.</p>
+                        </div>
+                        <span class="mt-2 sm:mt-0 bg-brand-50 text-brand-700 px-3 py-1 rounded-full text-sm font-semibold w-fit">2026 - Present</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 leading-relaxed">
+                        <li>วิเคราะห์ Requirement ออกแบบ และพัฒนาระบบบริหารจัดการอัตโนมัติ เพื่อยกระดับกระบวนการทำงานแบบ Manual ของฝ่ายคลังสินค้าและปฏิบัติการ</li>
+                        <li>ออกแบบสถาปัตยกรรมฐานข้อมูล (Schema Design), ปรับแต่ง SQL Query และกำหนดค่าเซิร์ฟเวอร์ เพื่อรองรับการประมวลผลข้อมูลขนาดใหญ่ได้อย่างรวดเร็ว</li>
+                        <li>ดูแลรักษาและสนับสนุนทางเทคนิค (Technical Support) สำหรับระบบงานภายในองค์กร เพื่อให้ระบบมีเสถียรภาพและความพร้อมใช้งานสูงสุด</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2: Autobiz Academic Co., Ltd. & Independent Clients -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover relative border-l-4 border-l-brand-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Business Analyst & System Developer (Consultant)</h3>
+                            <p class="text-brand-600 font-medium text-lg">Autobiz Academic Co., Ltd. & Independent Clients</p>
+                        </div>
+                        <span class="mt-2 sm:mt-0 bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold w-fit">2019 - 2025</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 leading-relaxed">
+                        <li>พัฒนาและออกแบบเครื่องมือจัดการข้อมูลเฉพาะทาง (Data & Reporting Solutions) เพื่อแก้ปัญหาด้านการสรุปผล ประมวลผล และสร้างรายงานบริหารจัดการที่แม่นยำรวดเร็ว</li>
+                        <li>ให้คำปรึกษาเชิงลึกด้านระบบสารสนเทศองค์กร (System & Process Consulting) พร้อมวางแนวทางแก้ไขปัญหากระบวนการทำงานและปรับปรุง Workflow ให้มีประสิทธิภาพ</li>
+                        <li>ร่วมมือกับพันธมิตรทางธุรกิจ (Strategic Partnerships) ในการบริหารและส่งมอบโปรเจกต์พัฒนาระบบซอฟต์แวร์ขนาดใหญ่ให้บรรลุเป้าหมายอย่างมืออาชีพ</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3: ExxonMobil Limited -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover relative border-l-4 border-l-brand-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Database Specialist / Analyst</h3>
+                            <p class="text-brand-600 font-medium text-lg">ExxonMobil Limited</p>
+                        </div>
+                        <span class="mt-2 sm:mt-0 bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold w-fit">2014 - 2019</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 leading-relaxed">
+                        <li>ดูแลรักษาและแก้ไขปัญหาระบบงานเดิม ให้สามารถรองรับการทำงานได้อย่างต่อเนื่องและมีเสถียรภาพสูงสุด</li>
+                        <li>ออกแบบและพัฒนาระบบงานใหม่ขึ้นมาทดแทนระบบเดิม ยกระดับสถาปัตยกรรมข้อมูลและการประมวลผลให้ทันสมัย</li>
+                        <li>สร้างเครื่องมือ Office Automation เปลี่ยนกระบวนการทำงานในสำนักงานให้เป็นระบบอัตโนมัติ เพิ่มความรวดเร็วและแม่นยำของข้อมูล</li>
+                        <li>จัดอบรม (Training) ถ่ายทอดความรู้และทักษะการใช้งานโปรแกรม Microsoft Excel และเครื่องมือไอทีแก่พนักงานในองค์กร</li>
+                    </ul>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover relative border-l-4 border-l-slate-400">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">IT Support Specialist</h3>
+                            <p class="text-brand-600 font-medium text-lg">TVS PCL.</p>
+                        </div>
+                        <span class="mt-2 sm:mt-0 bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold w-fit">2012 - 2013</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 leading-relaxed">
+                        <li>บริหารจัดการโครงสร้างพื้นฐาน IT, ตั้งค่า Hardware, ดูแลระบบเครือข่าย และแก้ไขปัญหาทางเทคนิคให้กับผู้ใช้งานระดับองค์กร</li>
+                        <li>ดูแลความเสถียรของระบบและให้บริการสนับสนุนช่วยเหลือแก้ปัญหาแก่ทุกแผนกอย่างรวดเร็ว</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Awards Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">ผลงานและรางวัล (Projects & Awards)</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full mb-4"></div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">รางวัลแห่งความภาคภูมิใจ (Awards & Recognition)</h3>
+                </div>
+
+                <!-- Intro Paragraph -->
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 mb-8 card-hover">
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        จุดเริ่มต้นของการเป็นนักพัฒนาซอฟต์แวร์ คือการตอบปัญหา Excel ในเว็บ <a href="https://www.snasui.com" target="_blank" class="text-brand-600 hover:underline font-semibold">www.snasui.com</a> (เว็บตอบคำถาม Excel ที่ดีที่สุดในประเทศไทย) ซึ่งผมเป็นผู้ที่ตอบคำถามเยอะที่สุดเป็นอันดับ 2 ของเว็บ ระดับกูรู โดยตอบปัญหาไปแล้ว <strong>3,868 กระทู้</strong> สิ่งนี้ถือเป็นผลงานที่ผมภูมิใจ
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Award 1: Fastwork -->
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-amber-200/60">Fastwork Platform</span>
+                                <i class="fas fa-award text-amber-500 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">รางวัลผู้รับงานยอดเยี่ยมจาก Fastwork</h4>
+                            <p class="text-slate-600 text-base leading-relaxed mb-6">
+                                รางวัลผู้รับงานและทำเงินได้ทะลุ <strong>5 แสนบาท</strong> และ <strong>1 ล้านบาท</strong> จากเว็บ Fastwork โดยส่งงานสำเร็จกว่า <strong>180 โปรเจกต์</strong> (MS Access 116 โปรเจกต์, MS Excel 64 โปรเจกต์)
+                            </p>
+                        </div>
+                        
+                        <!-- Award Images -->
+                        <div class="grid grid-cols-2 gap-4 mt-2">
+                            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white aspect-video group cursor-pointer shadow-sm" onclick="openImageModal('Aw1.jpg')">
+                                <img src="Aw1.jpg" alt="Fastwork Award 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white aspect-video group cursor-pointer shadow-sm" onclick="openImageModal('Aw2.jpg')">
+                                <img src="Aw2.jpg" alt="Fastwork Award 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award 2: ExxonMobil -->
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-blue-50 text-brand-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-200/60">ExxonMobil Limited</span>
+                                <i class="fas fa-star text-amber-500 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">COPS Star of the Quarter (2017)</h4>
+                            <p class="text-slate-600 text-base leading-relaxed">
+                                Awarded COPS Star of the Quarter (2017) พนักงานดีเด่นประจำควอเตอร์ตอนทำงานกับ ExxonMobil เนื่องจากช่วยสร้างเครื่องมือที่ช่วยงานแผนกได้จริง รวมถึงแผนกอื่นๆ ที่ขอให้ช่วยด้วย
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categorized Projects Section (Access, Excel, Web) -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">ประเภทผลงาน (Project Categories)</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category 1: งาน Access -->
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">1. งาน Access</h4>
+                            <ul class="space-y-2 text-slate-600 text-sm leading-relaxed mb-6">
+                                <li><strong class="text-slate-900">ระบบจัดการคลังสินค้า:</strong> ควบคุมสต็อก รับเข้า-จ่ายออก และแจ้งเตือนสต็อกใกล้หมด</li>
+                                <li><strong class="text-slate-900">ระบบควบคุมคุณภาพ (IQC):</strong> บันทึกผลตรวจสอบวัตถุดิบและออกรายงานอัตโนมัติ</li>
+                                <li><strong class="text-slate-900">ระบบบัญชีและการเงิน:</strong> จัดการลูกหนี้/เจ้าหนี้ ใบวางบิล และระบบตัดจ่าย</li>
+                                <li><strong class="text-slate-900">ระบบจัดซื้อ:</strong> ติดตามใบขอซื้อ (PR) และใบสั่งซื้อ (PO)</li>
+                                <li><strong class="text-slate-900">ระบบบริหารบุคคล:</strong> บันทึกเวลาทำงานและสถิติการลา</li>
+                                <li><strong class="text-slate-900">ระบบรายงานผู้บริหาร:</strong> รวบรวมข้อมูลและสรุป Dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">MS Access</span>
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">Database System</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: งาน Excel -->
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">2. งาน Excel</h4>
+                            <ul class="space-y-2 text-slate-600 text-sm leading-relaxed mb-6">
+                                <li><strong class="text-slate-900">ระบบนำเข้าข้อมูลดิบ (Data Import):</strong> เครื่องมือดึงและแปลงไฟล์ (Excel, CSV) เข้าฐานข้อมูลอัตโนมัติ</li>
+                                <li><strong class="text-slate-900">ระบบออกใบกำกับภาษี/ใบวางบิล:</strong> จัดการเอกสารทางบัญชีได้อย่างรวดเร็วและแม่นยำ</li>
+                                <li><strong class="text-slate-900">ระบบตัดจ่ายและบัญชีธนาคาร:</strong> ควบคุมยอดเงินรับ-จ่ายและการทำธุรกรรมทางการเงิน</li>
+                                <li><strong class="text-slate-900">รายงานสรุปสำหรับผู้บริหาร:</strong> วิเคราะห์ข้อมูลและแสดงผลผ่าน Dashboard ที่เข้าใจง่าย</li>
+                                <li><strong class="text-slate-900">เครื่องมือคำนวณต้นทุนและวางแผนผลิต:</strong> ช่วยคำนวณต้นทุนสินค้าและวางแผนการผลิตในโรงงาน</li>
+                                <li><strong class="text-slate-900">ระบบ Automation ด้วย VBA:</strong> เขียนโค้ดอัตโนมัติเพื่อลดขั้นตอนการทำงานซ้ำซ้อนและลดความผิดพลาด</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">MS Excel VBA</span>
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">Data Reporting</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: งาน Web -->
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">3. งาน Web</h4>
+                            <ul class="space-y-4 text-slate-600 text-sm leading-relaxed mb-6">
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1PBraGfuAm_Qof_IEpTeud8Ixvq5jf9w4/view?usp=drivesdk" target="_blank" class="text-brand-600 font-semibold hover:underline block mb-1">ClimaxPro <i class="fas fa-external-link-alt text-xs ml-1"></i></a>
+                                    <span class="text-slate-500">แพลตฟอร์มคำนวณคาร์บอนฟุตพริ้นท์และวิเคราะห์ข้อมูลผ่าน Dashboard</span>
+                                </li>
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1PBraGfuAm_Qof_IEpTeud8Ixvq5jf9w4/view?usp=drivesdk" target="_blank" class="text-brand-600 font-semibold hover:underline block mb-1">bls-document <i class="fas fa-external-link-alt text-xs ml-1"></i></a>
+                                    <span class="text-slate-500">ระบบจัดการ ควบคุมเอกสารออนไลน์ และดำเนินการทำรายการ (Transaction Processing) อย่างปลอดภัย</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">PHP / Laravel</span>
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">JavaScript</span>
+                            <span class="bg-white text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Portfolio Google Drive Link -->
+                <div class="mt-12 bg-gradient-to-r from-brand-50 to-slate-50 p-8 rounded-2xl border border-brand-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 card-hover">
+                    <div class="flex items-start sm:items-center gap-4 text-left">
+                        <div class="w-14 h-14 bg-white text-brand-600 rounded-2xl shadow-sm border border-brand-100 flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fab fa-google-drive"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">คลังตัวอย่างผลงานและเอกสารเพิ่มเติม (Full Portfolio Gallery)</h4>
+                            <p class="text-slate-600 text-base mt-1">
+                                ชมภาพตัวอย่างหน้าจอการทำงานของระบบ และรายละเอียดโปรเจกต์เพิ่มเติมได้ใน Google Drive
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1bIkuNCiI8t4KJhsj55t-wGXbeqqZqgJG" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-xl font-medium transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2 flex-shrink-0">
+                        <span>เปิดดูผลงานทั้งหมด</span>
+                        <i class="fas fa-external-link-alt text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal & Cool Contact Footer -->
+    <footer id="contact" class="bg-slate-950 text-white py-20 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <span class="text-brand-500 font-semibold tracking-widest uppercase text-xs">Let's Connect</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-10 tracking-tight">GET IN TOUCH</h2>
+
+            <!-- Contact Cards Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+                <!-- Email Card -->
+                <a href="mailto:bank9597@gmail.com" class="group bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-brand-500/50 p-6 rounded-2xl transition-all duration-300 flex items-center gap-4 text-left shadow-lg hover:shadow-brand-500/10">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium uppercase tracking-wider mb-1">Email</div>
+                        <div class="text-slate-200 font-semibold group-hover:text-brand-400 transition-colors text-sm sm:text-base">bank9597@gmail.com</div>
+                    </div>
+                </a>
+
+                <!-- Phone Card -->
+                <a href="tel:+66982603151" class="group bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-brand-500/50 p-6 rounded-2xl transition-all duration-300 flex items-center gap-4 text-left shadow-lg hover:shadow-brand-500/10">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium uppercase tracking-wider mb-1">Phone</div>
+                        <div class="text-slate-200 font-semibold group-hover:text-emerald-400 transition-colors text-sm sm:text-base">+66 (0) 98 260 3151</div>
+                    </div>
+                </a>
+
+                <!-- Line Card -->
+                <div class="group bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-green-500/50 p-6 rounded-2xl transition-all duration-300 flex items-center gap-4 text-left shadow-lg hover:shadow-green-500/15">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fab fa-line"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium uppercase tracking-wider mb-1">LINE ID</div>
+                        <div class="text-slate-200 font-semibold group-hover:text-green-400 transition-colors text-sm sm:text-base">bank_9597</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="border-t border-slate-900 pt-8 text-slate-500 text-sm">
+                &copy; 2026 Anurak Traikaew. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal for Fullscreen View -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeImageModal()">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-brand-500 transition-colors">&times;</button>
+            <img id="modalImage" src="" alt="Full View" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain bg-slate-900">
+        </div>
+    </div>
+
+    <script>
+        function openImageModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
